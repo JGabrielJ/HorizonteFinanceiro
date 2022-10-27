@@ -7,18 +7,28 @@
 
 import SwiftUI
 
+// NavigationView e Toolbar
+
+struct InitContent: View {
+    var body: some View {
+        Text("App Rende")
+    }
+}
 
 struct InitialView: View {
     var body: some View {
-        Color(.white)
-
-        Button {
-            print("Indo para as Configurações...")
-        } label: {
-            Image("gear")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 56, height: 56)
+        NavigationView {
+            InitContent()
+            .toolbar {
+                Button {
+                    print("Indo para as Configurações...")
+                } label: {
+                    Image("gear")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32, height: 32)
+                }
+            }
         }
     }
 }
