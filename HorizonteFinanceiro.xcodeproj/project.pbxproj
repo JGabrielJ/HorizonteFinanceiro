@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */; };
-		BBD064A4290B1B2F008CC2B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A3290B1B2F008CC2B0 /* ContentView.swift */; };
+		BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */; };
 		BBD064A6290B1B2F008CC2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */; };
 		BBD064A9290B1B2F008CC2B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A8290B1B2F008CC2B0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		BBD0649E290B1B2F008CC2B0 /* HorizonteFinanceiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizonteFinanceiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonteFinanceiroApp.swift; sourceTree = "<group>"; };
-		BBD064A3290B1B2F008CC2B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBD064A8290B1B2F008CC2B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */,
-				BBD064A3290B1B2F008CC2B0 /* ContentView.swift */,
+				BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */,
 				BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */,
 				BBD064A7290B1B2F008CC2B0 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD064A4290B1B2F008CC2B0 /* ContentView.swift in Sources */,
+				BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */,
 				BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
