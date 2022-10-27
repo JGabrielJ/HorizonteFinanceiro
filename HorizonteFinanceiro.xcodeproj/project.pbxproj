@@ -53,11 +53,11 @@
 		BBD064A0290B1B2F008CC2B0 /* HorizonteFinanceiro */ = {
 			isa = PBXGroup;
 			children = (
+				BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */,
+				BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */,
 				BBD064B1290B1CCD008CC2B0 /* ContentScreens */,
 				BBD064B0290B1CA8008CC2B0 /* OptionScreens */,
 				BBD064AF290B1C9C008CC2B0 /* HomeScreens */,
-				BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */,
-				BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */,
 				BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */,
 				BBD064A7290B1B2F008CC2B0 /* Preview Content */,
 			);

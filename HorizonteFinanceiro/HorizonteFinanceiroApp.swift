@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+
 @main
 struct HorizonteFinanceiroApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GeneralView()
         }
     }
 }

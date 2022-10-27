@@ -10,7 +10,16 @@ import SwiftUI
 
 struct InitialView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Color(.white)
+
+        Button {
+            print("Indo para as Configurações...")
+        } label: {
+            Image("gear")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 56, height: 56)
+        }
     }
 }
 
