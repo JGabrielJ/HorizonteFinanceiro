@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GeneralView: View {
     var body: some View {
-        Text("App Rende")
+        Text("Horizonte")
     }
 }
 
