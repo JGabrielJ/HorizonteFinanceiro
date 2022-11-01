@@ -2,15 +2,32 @@
 //  InitialView.swift
 //  HorizonteFinanceiro
 //
-//  Created by João Gabriel Jacinto da Silva on 01/11/22.
+//  Created by João Gabriel Jacinto da Silva on 27/10/22.
 //
 
 import SwiftUI
 
+// NavigationView e Toolbar
+
+struct InitContent: View {
+    var body: some View {
+        Text("App Rende")
+    }
+}
 
 struct InitialView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            InitContent()
+            .toolbar {
+                NavigationLink(destination: InitialView(), label: {
+                    Image(systemName: "gearshape.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32, height: 32)
+                })
+            }
+        }
     }
 }
 
