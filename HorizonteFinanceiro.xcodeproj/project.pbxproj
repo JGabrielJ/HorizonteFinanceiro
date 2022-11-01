@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB5D84EC291189B0001A8CAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D84EB291189B0001A8CAE /* ContentView.swift */; };
 		BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */; };
 		BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */; };
 		BBD064A6290B1B2F008CC2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB5D84EB291189B0001A8CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBD0649E290B1B2F008CC2B0 /* HorizonteFinanceiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizonteFinanceiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonteFinanceiroApp.swift; sourceTree = "<group>"; };
 		BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		BBD064B1290B1CCD008CC2B0 /* ContentScreens */ = {
 			isa = PBXGroup;
 			children = (
+				BB5D84EB291189B0001A8CAE /* ContentView.swift */,
 			);
 			path = ContentScreens;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */,
 				BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */,
+				BB5D84EC291189B0001A8CAE /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
