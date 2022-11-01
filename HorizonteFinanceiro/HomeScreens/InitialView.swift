@@ -23,7 +23,7 @@ struct InitialView: View {
                 Button {
                     print("Indo para as Configurações...")
                 } label: {
-                    Image("gear")
+                    Image(systemName: "gearshape.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 32, height: 32)
