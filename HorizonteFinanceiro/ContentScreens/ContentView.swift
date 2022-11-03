@@ -8,9 +8,45 @@
 import SwiftUI
 
 
+struct HomeView: View {
+    var body: some View {
+        Text("Tela Inicial")
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(alignment: .center) {
+                Text("Educação Financeira e Seus Aspectos")
+                    .bold()
+                    .font(.title)
+                    .frame(width: 400, height: 200, alignment: .center)
+                    .multilineTextAlignment(.center)
+                    .navigationBarTitleDisplayMode(.inline)
+                    
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(.white)
+                    .frame(width: 400, height: 400, alignment: .center)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(.blue, lineWidth: 3)
+                    )
+
+                Spacer()
+
+                    .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            NavigationLink(destination: HomeView(), label: {
+                                Image(systemName: "arrow.right.square")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 48, height: 48, alignment: .center)
+                            })
+                        }
+                    }
+            }
+        }
     }
 }
 
