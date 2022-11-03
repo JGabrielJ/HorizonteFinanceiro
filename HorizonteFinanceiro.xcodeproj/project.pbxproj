@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBCEFEBF2914338100596737 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCEFEBE2914338100596737 /* ConfigView.swift */; };
 		BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */; };
 		BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */; };
 		BBD064A6290B1B2F008CC2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BBCEFEBE2914338100596737 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfigView.swift; path = HorizonteFinanceiro/ConfigView.swift; sourceTree = SOURCE_ROOT; };
 		BBD0649E290B1B2F008CC2B0 /* HorizonteFinanceiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizonteFinanceiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonteFinanceiroApp.swift; sourceTree = "<group>"; };
 		BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		BBD064B0290B1CA8008CC2B0 /* OptionScreens */ = {
 			isa = PBXGroup;
 			children = (
+				BBCEFEBE2914338100596737 /* ConfigView.swift */,
 			);
 			path = OptionScreens;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCEFEBF2914338100596737 /* ConfigView.swift in Sources */,
 				BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */,
 				BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */,
 			);
