@@ -24,7 +24,7 @@ struct ContentView: View {
                     .frame(width: 400, height: 200)
                     .multilineTextAlignment(.center)
                     .navigationBarTitleDisplayMode(.inline)
-                
+
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
                         .fill(.white)
