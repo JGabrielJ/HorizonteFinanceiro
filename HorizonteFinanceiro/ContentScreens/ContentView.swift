@@ -8,12 +8,48 @@
 import SwiftUI
 
 
+struct TipElement: View {
+    @State var tip = ""
+    @State var idea = false
+
+    var body: some View {
+        HStack {
+            Button {
+                if idea {
+                    tip = ""
+                    idea = false
+                } else {
+                    tip = "Essa é uma dica!"
+                    idea = true
+                }
+            } label: {
+                Image(systemName: "lightbulb.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.yellow)
+                    .frame(width: 64, height: 44)
+            }
+
+            ZStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(.white)
+                    .frame(width: 275, height: 64)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(.blue, lineWidth: 3)
+                    )
+
+                Text(tip)
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     @State var expl = ""
-    @State var dica = ""
     @State var page = -1
-    @State var idea = false
-    @State var conts = ["Conteúdo 1", "Conteúdo 2", "Conteúdo 3"]
+    @State var notice = ""
+    @State var conts = ["Conteúdo 1", "Conteúdo 2", "Conteúdo 3", "Conteúdo 4", "Conteúdo 5"]
 
     var body: some View {
         NavigationView {
@@ -24,6 +60,9 @@ struct ContentView: View {
                     .frame(width: 400, height: 200)
                     .multilineTextAlignment(.center)
                     .navigationBarTitleDisplayMode(.inline)
+
+                Text(notice)
+                    .bold()
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
@@ -38,35 +77,9 @@ struct ContentView: View {
                 }
 
                 Spacer()
-                
-                HStack {
-                    Button {
-                        if idea {
-                            dica = ""
-                            idea = false
-                        } else {
-                            dica = "Essa é uma dica!"
-                            idea = true
-                        }
-                    } label: {
-                        Image(systemName: "lightbulb.fill")
-                             .resizable()
-                             .scaledToFit()
-                             .foregroundColor(.yellow)
-                             .frame(width: 64, height: 44)
-                    }
 
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 15)
-                            .fill(.white)
-                            .frame(width: 275, height: 64)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(.blue, lineWidth: 3)
-                            )
-
-                        Text(dica)
-                    }
+                if page == 2 {
+                    TipElement()
                 }
 
                 Spacer()
@@ -78,6 +91,14 @@ struct ContentView: View {
                                 if page >= 1 {
                                     page -= 1
                                     expl = conts[page]
+
+                                    if page == 3 {
+                                        notice = "Fique de 👀 no exemplo"
+                                    } else if page == 4 {
+                                        notice = "Fique atento a um detalhe"
+                                    } else {
+                                        notice = ""
+                                    }
                                 }
                             } label: {
                                 Image(systemName: "arrow.left.square")
@@ -93,6 +114,14 @@ struct ContentView: View {
                                 if page < conts.count - 1 {
                                     page += 1
                                     expl = conts[page]
+                                    
+                                    if page == 3 {
+                                        notice = "Fique de 👀 no exemplo"
+                                    } else if page == 4 {
+                                        notice = "Fique atento a um detalhe"
+                                    } else {
+                                        notice = ""
+                                    }
                                 }
                             } label: {
                                 Image(systemName: "arrow.right.square")
