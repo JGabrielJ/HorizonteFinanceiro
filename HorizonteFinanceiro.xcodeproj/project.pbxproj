@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		BB5D84EB291189B0001A8CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BBA3DEE42926A62700288041 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialView.swift; path = HorizonteFinanceiro/InitialView.swift; sourceTree = SOURCE_ROOT; };
+		BBA3DEE42926A62700288041 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialView.swift; path = HorizonteFinanceiro/HomeScreens/InitialView.swift; sourceTree = SOURCE_ROOT; };
 		BBAD4C95291EBB9D002982FC /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		BBD0649E290B1B2F008CC2B0 /* HorizonteFinanceiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizonteFinanceiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonteFinanceiroApp.swift; sourceTree = "<group>"; };
