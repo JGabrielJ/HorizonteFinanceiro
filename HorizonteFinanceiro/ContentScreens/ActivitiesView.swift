@@ -12,7 +12,8 @@ struct ActivitiesView: View {
     var body: some View {
         Text("Agora vamos por em prática o que aprendemos")
             .bold()
-            .font(.largeTitle)
+            .padding()
+            .font(.title)
             .foregroundColor(.blue)
             .multilineTextAlignment(.center)
     }

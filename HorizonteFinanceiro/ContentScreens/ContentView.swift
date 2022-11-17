@@ -46,8 +46,7 @@ struct TipElement: View {
 }
 
 struct ContentView: View {
-    @State var expl = ""
-    @State var page = -1
+    @State var page = 0
     @State var notice = ""
     @State var conts = ["Conteúdo 1", "Conteúdo 2", "Conteúdo 3", "Conteúdo 4", "Conteúdo 5"]
 
@@ -73,7 +72,8 @@ struct ContentView: View {
                                 .stroke(.blue, lineWidth: 3)
                         )
 
-                    Text(expl)
+                    Text(conts[page])
+                        .foregroundColor(.black)
                 }
 
                 Spacer()
@@ -90,8 +90,6 @@ struct ContentView: View {
                             Button {
                                 if page >= 1 {
                                     page -= 1
-                                    expl = conts[page]
-
                                     if page == 3 {
                                         notice = "Fique de 👀 no exemplo"
                                     } else if page == 4 {
@@ -110,25 +108,33 @@ struct ContentView: View {
 
                             Spacer()
 
-                            Button {
-                                if page < conts.count - 1 {
-                                    page += 1
-                                    expl = conts[page]
-                                    
-                                    if page == 3 {
-                                        notice = "Fique de 👀 no exemplo"
-                                    } else if page == 4 {
-                                        notice = "Fique atento a um detalhe"
-                                    } else {
-                                        notice = ""
+                            if page == 4 {
+                                NavigationLink(destination: ActivitiesView(), label: {
+                                        Image(systemName: "arrow.right.square")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .foregroundColor(.blue)
+                                            .frame(width: 48, height: 48)
+                                    })
+                            } else {
+                                Button {
+                                    if page < conts.count - 1 {
+                                        page += 1
+                                        if page == 3 {
+                                            notice = "Fique de 👀 no exemplo"
+                                        } else if page == 4 {
+                                            notice = "Fique atento a um detalhe"
+                                        } else {
+                                            notice = ""
+                                        }
                                     }
+                                } label: {
+                                    Image(systemName: "arrow.right.square")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(.blue)
+                                        .frame(width: 48, height: 48)
                                 }
-                            } label: {
-                                Image(systemName: "arrow.right.square")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(.blue)
-                                    .frame(width: 48, height: 48)
                             }
                         }
                     }
