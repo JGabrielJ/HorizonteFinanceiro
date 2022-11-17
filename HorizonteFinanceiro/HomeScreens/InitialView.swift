@@ -12,16 +12,22 @@ struct InitialView1: View {
     var body: some View {
         Form {
             Section("Introdução ao Mundo Financeiro") {
-                NavigationLink(destination: Text("Conteúdo 1"), label:{
-                    Image("Hands - Coin")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 45, height: 45)
-                    
-                    Spacer(minLength: 20)
-                    Text("Planejamento Financeiro e Sua Importância")
-                })
-            }
+                HStack {
+                    NavigationLink(destination: Text("Conteúdo 1"), label:{
+                        Image("Hands - Coin")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45)
+                        
+                        Spacer(minLength: 20)
+                        Text("Planejamento Financeiro e Sua Importância")
+                    })
+                }.overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(.blue, lineWidth: 3)
+                        .frame(width: 350, height: 65)
+                )
+            }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: Text("Conteúdo 2"), label:{
                     Image("Planejamento")
@@ -31,7 +37,11 @@ struct InitialView1: View {
                     Spacer(minLength: 20)
                     Text("Planejamento Financeiro e Sua Importância")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
             Section {
                 NavigationLink(destination: Text("Conteúdo 3"), label:{
                     Image("Variável x Fixa")
@@ -41,17 +51,27 @@ struct InitialView1: View {
                     Spacer(minLength: 20)
                     Text("Renda Variável x Renda Fixa")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
             Section("Investimentos e Conta Bancária") {
-                NavigationLink(destination: Text("Conteúdo 4"), label:{
-                    Image("Cash")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 45, height: 45)
-                    Spacer(minLength: 20)
-                    Text("Bancos: Aliados ou Inimigos?")
-                })
-            }
+                HStack {
+                    NavigationLink(destination: Text("Conteúdo 4"), label:{
+                        Image("Cash")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45)
+                        Spacer(minLength: 20)
+                        Text("Bancos: Aliados ou Inimigos?")
+                    })
+                }.overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(.blue, lineWidth: 3)
+                        .frame(width: 350, height: 65)
+                )
+            }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: Text("Conteúdo 5"), label:{
                     Image("Creditcard")
@@ -61,7 +81,11 @@ struct InitialView1: View {
                     Spacer(minLength: 20)
                     Text("Uso e Precaução")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
             Section {
                 NavigationLink(destination: Text("Conteúdo 6"), label:{
                     Image("Juros")
@@ -71,23 +95,33 @@ struct InitialView1: View {
                     Spacer(minLength: 20)
                     Text("Juros Composto x Juros Variável")
                     })
-                }
-            }
+                }.overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(.blue, lineWidth: 3)
+                        .frame(width: 350, height: 65)
+                )
+            }.headerProminence(.increased)
         }
     }
 struct InitialView2: View {
     var body: some View {
         Form {
             Section("Renda Fixa") {
-                NavigationLink(destination: Text("Conteúdo 7"), label:{
-                    Image("Chart")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 45, height: 45)
-                    Spacer(minLength: 20)
-                    Text("Introdução a Renda Fixa")
-                })
-            }
+                HStack {
+                    NavigationLink(destination: Text("Conteúdo 7"), label:{
+                        Image("Chart")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45)
+                        Spacer(minLength: 20)
+                        Text("Introdução a Renda Fixa")
+                    })
+                }.overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(.blue, lineWidth: 3)
+                        .frame(width: 350, height: 65)
+                )
+            }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: Text("Conteúdo 8"), label:{
                     Image("Give")
@@ -97,7 +131,11 @@ struct InitialView2: View {
                     Spacer(minLength: 20)
                     Text("CDB x LCI")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
             Section {
                 NavigationLink(destination: Text("Conteúdo 9"), label:{
                     Image("")
@@ -107,17 +145,27 @@ struct InitialView2: View {
                     Spacer(minLength: 20)
                     Text("Fundo Imobiliário e Poupança")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
             Section("Bancos e Investimentos") {
-                NavigationLink(destination: Text("Conteúdo 10"), label:{
-                    Image("")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 45, height: 45)
-                    Spacer(minLength: 20)
-                    Text("Tipos de Bancos e suas Relações")
+                HStack {
+                    NavigationLink(destination: Text("Conteúdo 10"), label:{
+                        Image("")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45, height: 45)
+                        Spacer(minLength: 20)
+                        Text("Tipos de Bancos e suas Relações")
                     })
-                }
+                }.overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(.blue, lineWidth: 3)
+                        .frame(width: 350, height: 65)
+                )
+            }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: Text("Conteúdo 11"), label: {
                     Image("")
@@ -127,7 +175,11 @@ struct InitialView2: View {
                     Spacer(minLength: 20)
                     Text("Menores de idade podem investir ?")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
             Section{
                 NavigationLink(destination: Text("Conteúdo 12"), label: {
                     Image("")
@@ -137,7 +189,11 @@ struct InitialView2: View {
                     Spacer(minLength: 20)
                     Text("Vantagens e Desvantagens de investimento ")
                 })
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.blue, lineWidth: 3)
+                    .frame(width: 350, height: 65)
+            )
         }
     }
 }
@@ -148,14 +204,14 @@ struct InitialView: View {
                 TabView {
                     InitialView1()
                     InitialView2()
-                }.tabViewStyle(.page(indexDisplayMode: .always))
+                }.tabViewStyle(.page(indexDisplayMode: .never))
                     .toolbar{
                         NavigationLink(destination: OptionView(),label: {
                             Image(systemName: "gearshape.fill")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 32, height: 32)
-                                .foregroundColor(.black)
+                                .foregroundColor(.blue)
                         })
                     }
                     .toolbar {
@@ -181,8 +237,8 @@ struct InitialView: View {
                                             .foregroundColor(.blue)
                                     }
                                 }).position(x: 90, y: 25)
+                            }
                         }
-                    }
                 }.bold()
             }
         }
