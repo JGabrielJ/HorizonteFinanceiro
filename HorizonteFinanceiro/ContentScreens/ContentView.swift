@@ -48,15 +48,18 @@ struct TipElement: View {
 struct ContentView: View {
     @State var page = 0
     @State var notice = ""
-    @State var conts = ["Conteúdo 1", "Conteúdo 2", "Conteúdo 3", "Conteúdo 4", "Conteúdo 5"]
+    @State var title = ""
+    @State var conts = ["", "", "", "", ""]
 
     var body: some View {
         NavigationView {
             VStack {
-                Text("Educação Financeira e Seus Aspectos")
+                Spacer()
+
+                Text(title)
                     .bold()
                     .font(.title)
-                    .frame(width: 400, height: 200)
+                    .padding()
                     .multilineTextAlignment(.center)
                     .navigationBarTitleDisplayMode(.inline)
 
@@ -87,35 +90,45 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItem(placement: .bottomBar) {
                         HStack {
-                            Button {
-                                if page >= 1 {
-                                    page -= 1
-                                    if page == 3 {
-                                        notice = "Fique de 👀 no exemplo"
-                                    } else if page == 4 {
-                                        notice = "Fique atento a um detalhe"
-                                    } else {
-                                        notice = ""
+                            if page == 0 {
+                                NavigationLink(destination: InitialView(), label: {
+                                    Image(systemName: "arrow.left.square")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(.blue)
+                                        .frame(width: 48, height: 48)
+                                })
+                            } else {
+                                Button {
+                                    if page >= 1 {
+                                        page -= 1
+                                        if page == 3 {
+                                            notice = "Fique de 👀 no exemplo"
+                                        } else if page == 4 {
+                                            notice = "Fique atento a um detalhe"
+                                        } else {
+                                            notice = ""
+                                        }
                                     }
+                                } label: {
+                                    Image(systemName: "arrow.left.square")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(.blue)
+                                        .frame(width: 48, height: 48)
                                 }
-                            } label: {
-                                Image(systemName: "arrow.left.square")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(.blue)
-                                    .frame(width: 48, height: 48)
                             }
 
                             Spacer()
 
                             if page == 4 {
                                 NavigationLink(destination: ActivitiesView(), label: {
-                                        Image(systemName: "arrow.right.square")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundColor(.blue)
-                                            .frame(width: 48, height: 48)
-                                    })
+                                    Image(systemName: "arrow.right.square")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(.blue)
+                                        .frame(width: 48, height: 48)
+                                })
                             } else {
                                 Button {
                                     if page < conts.count - 1 {
@@ -140,7 +153,7 @@ struct ContentView: View {
                     }
                 }
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

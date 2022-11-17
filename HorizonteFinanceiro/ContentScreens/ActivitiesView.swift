@@ -10,12 +10,24 @@ import SwiftUI
 
 struct ActivitiesView: View {
     var body: some View {
-        Text("Agora vamos por em prática o que aprendemos")
-            .bold()
-            .padding()
-            .font(.title)
-            .foregroundColor(.blue)
-            .multilineTextAlignment(.center)
+        VStack {
+            Text("Agora vamos por em prática o que aprendemos")
+                .bold()
+                .padding()
+                .font(.title)
+                .foregroundColor(.blue)
+                .multilineTextAlignment(.center)
+            
+            ZStack {
+                Button {
+                    
+                } label: {
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(.black)
+                        .frame(width: 250, height: 50)
+                }
+            }
+        }
     }
 }
 
