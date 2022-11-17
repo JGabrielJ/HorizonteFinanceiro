@@ -10,6 +10,7 @@
 		BB5D84EA29118948001A8CAE /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D84E929118948001A8CAE /* InitialView.swift */; };
 		BB5D84EE29118F79001A8CAE /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D84ED29118F79001A8CAE /* OptionView.swift */; };
 		BB5D84F029118FA6001A8CAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D84EF29118FA6001A8CAE /* ContentView.swift */; };
+		BBA3DEE72926BD4F00288041 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA3DEE62926BD4F00288041 /* ActivitiesView.swift */; };
 		BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */; };
 		BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */; };
 		BBD064A6290B1B2F008CC2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		BB5D84E929118948001A8CAE /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		BB5D84ED29118F79001A8CAE /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
 		BB5D84EF29118FA6001A8CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = HorizonteFinanceiro/OptionScreens/ContentView.swift; sourceTree = SOURCE_ROOT; };
+		BBA3DEE62926BD4F00288041 /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		BBD0649E290B1B2F008CC2B0 /* HorizonteFinanceiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizonteFinanceiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD064A1290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonteFinanceiroApp.swift; sourceTree = "<group>"; };
 		BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BB5D84EF29118FA6001A8CAE /* ContentView.swift */,
+				BBA3DEE62926BD4F00288041 /* ActivitiesView.swift */,
 			);
 			path = ContentScreens;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				BB5D84EA29118948001A8CAE /* InitialView.swift in Sources */,
 				BB5D84F029118FA6001A8CAE /* ContentView.swift in Sources */,
 				BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */,
+				BBA3DEE72926BD4F00288041 /* ActivitiesView.swift in Sources */,
 				BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */,
 				BB5D84EE29118F79001A8CAE /* OptionView.swift in Sources */,
 			);

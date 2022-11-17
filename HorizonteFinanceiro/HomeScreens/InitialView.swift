@@ -7,20 +7,21 @@
 
 import SwiftUI
 
+
 // NavigationView e Toolbar
 struct InitialView1: View {
     var body: some View {
         Form {
             Section("Introdução ao Mundo Financeiro") {
                 HStack {
-                    NavigationLink(destination: Text("Conteúdo 1"), label:{
+                    NavigationLink(destination: ContentView(title: "Educação Financeira e Seus Aspectos", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                         Image("Hands - Coin")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
-                        
+
                         Spacer(minLength: 20)
-                        Text("Planejamento Financeiro e Sua Importância")
+                        Text("Educação Financeira e Seus Aspectos")
                     })
                 }.overlay(
                     RoundedRectangle(cornerRadius: 15)
@@ -29,7 +30,7 @@ struct InitialView1: View {
                 )
             }.headerProminence(.increased)
             Section {
-                NavigationLink(destination: Text("Conteúdo 2"), label:{
+                NavigationLink(destination: ContentView(title: "Planejamento Financeiro e Sua Importância", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("Planejamento")
                         .resizable()
                         .scaledToFit()
@@ -43,7 +44,7 @@ struct InitialView1: View {
                     .frame(width: 350, height: 65)
             )
             Section {
-                NavigationLink(destination: Text("Conteúdo 3"), label:{
+                NavigationLink(destination: ContentView(title: "Renda Variável x Renda Fixa", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("Variável x Fixa")
                         .resizable()
                         .scaledToFit()
@@ -58,7 +59,7 @@ struct InitialView1: View {
             )
             Section("Investimentos e Conta Bancária") {
                 HStack {
-                    NavigationLink(destination: Text("Conteúdo 4"), label:{
+                    NavigationLink(destination: ContentView(title: "Bancos: Aliados ou Inimigos?", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                         Image("Cash")
                             .resizable()
                             .scaledToFit()
@@ -73,7 +74,7 @@ struct InitialView1: View {
                 )
             }.headerProminence(.increased)
             Section {
-                NavigationLink(destination: Text("Conteúdo 5"), label:{
+                NavigationLink(destination: ContentView(title: "Uso e Precaução", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("Creditcard")
                         .resizable()
                         .scaledToFit()
@@ -87,7 +88,7 @@ struct InitialView1: View {
                     .frame(width: 350, height: 65)
             )
             Section {
-                NavigationLink(destination: Text("Conteúdo 6"), label:{
+                NavigationLink(destination: ContentView(title: "Juros Composto x Juros Variável", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("Juros")
                         .resizable()
                         .scaledToFit()
@@ -101,14 +102,15 @@ struct InitialView1: View {
                         .frame(width: 350, height: 65)
                 )
             }.headerProminence(.increased)
-        }
     }
+}
+
 struct InitialView2: View {
     var body: some View {
         Form {
             Section("Renda Fixa") {
                 HStack {
-                    NavigationLink(destination: Text("Conteúdo 7"), label:{
+                    NavigationLink(destination: ContentView(title: "Introdução a Renda Fixa", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                         Image("Chart")
                             .resizable()
                             .scaledToFit()
@@ -123,7 +125,7 @@ struct InitialView2: View {
                 )
             }.headerProminence(.increased)
             Section {
-                NavigationLink(destination: Text("Conteúdo 8"), label:{
+                NavigationLink(destination: ContentView(title: "CDB x LCI", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("Give")
                         .resizable()
                         .scaledToFit()
@@ -137,7 +139,7 @@ struct InitialView2: View {
                     .frame(width: 350, height: 65)
             )
             Section {
-                NavigationLink(destination: Text("Conteúdo 9"), label:{
+                NavigationLink(destination: ContentView(title: "Fundo Imobiliário e Poupança", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("")
                         .resizable()
                         .scaledToFit()
@@ -152,7 +154,7 @@ struct InitialView2: View {
             )
             Section("Bancos e Investimentos") {
                 HStack {
-                    NavigationLink(destination: Text("Conteúdo 10"), label:{
+                    NavigationLink(destination: ContentView(title: "Tipos de Bancos e suas Relações", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                         Image("")
                             .resizable()
                             .scaledToFit()
@@ -167,13 +169,13 @@ struct InitialView2: View {
                 )
             }.headerProminence(.increased)
             Section {
-                NavigationLink(destination: Text("Conteúdo 11"), label: {
+                NavigationLink(destination: ContentView(title: "Menores de idade podem investir?", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
                     Spacer(minLength: 20)
-                    Text("Menores de idade podem investir ?")
+                    Text("Menores de idade podem investir?")
                 })
             }.overlay(
                 RoundedRectangle(cornerRadius: 15)
@@ -181,13 +183,13 @@ struct InitialView2: View {
                     .frame(width: 350, height: 65)
             )
             Section{
-                NavigationLink(destination: Text("Conteúdo 12"), label: {
+                NavigationLink(destination: ContentView(title: "Vantagens e Desvantagens de Investimento", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
                     Image("")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
                     Spacer(minLength: 20)
-                    Text("Vantagens e Desvantagens de investimento ")
+                    Text("Vantagens e Desvantagens de Investimento")
                 })
             }.overlay(
                 RoundedRectangle(cornerRadius: 15)
@@ -197,54 +199,31 @@ struct InitialView2: View {
         }
     }
 }
+
 struct InitialView: View {
     var body: some View {
-        VStack{
+        VStack {
             NavigationView {
                 TabView {
                     InitialView1()
                     InitialView2()
-                }.tabViewStyle(.page(indexDisplayMode: .never))
-                    .toolbar{
-                        NavigationLink(destination: OptionView(),label: {
-                            Image(systemName: "gearshape.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 32, height: 32)
-                                .foregroundColor(.blue)
-                        })
-                    }
-                    .toolbar {
-                        ToolbarItem(placement: .bottomBar) {
-                            HStack {
-                                NavigationLink(destination: InitialView(), label: {
-                                    VStack {
-                                        Image(systemName: "house")
-                                        Text("Ínicio")
-                                    }.position(x: 55, y: 20)
-                                })
-                                Spacer()
-                                NavigationLink(destination: ContentView(), label: {
-                                    VStack {
-                                        Image(systemName: "book")
-                                        Text("Atividades")
-                                    }
-                                }).position(x: 115, y: 25)
-                                Spacer()
-                                NavigationLink(destination: ContentView(), label: {
-                                    VStack {               Image(systemName: "lightbulb")
-                                        Text("Explorar")
-                                            .foregroundColor(.blue)
-                                    }
-                                }).position(x: 90, y: 25)
-                            }
-                        }
-                }.bold()
+                }
+                .tabViewStyle(.page(indexDisplayMode: .always))
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
+
+                .toolbar{
+                    NavigationLink(destination: InitialView(),label: {
+                        Image(systemName: "gearshape.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 32, height: 32)
+                            .foregroundColor(.blue)
+                    })
+                }.background().ignoresSafeArea()
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
-
 
 struct InitialView_Previews: PreviewProvider {
     static var previews: some View {
