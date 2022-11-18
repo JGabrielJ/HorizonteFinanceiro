@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct ActivitiesView: View {
+    
     var body: some View {
         VStack {
             Text("Agora vamos por em prática o que aprendemos")
@@ -17,19 +18,23 @@ struct ActivitiesView: View {
                 .font(.title)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
+                .padding()
+
+
+                
+            }
             
             ZStack {
                 Button {
                     
                 } label: {
                     RoundedRectangle(cornerRadius: 15)
-                        .fill(.black)
+                        .fill(.white)
                         .frame(width: 250, height: 50)
                 }
             }
         }
     }
-}
 
 struct ActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
