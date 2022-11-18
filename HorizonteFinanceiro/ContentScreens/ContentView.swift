@@ -40,6 +40,7 @@ struct TipElement: View {
                     )
 
                 Text(tip)
+                    .foregroundColor(.black)
             }
         }
     }
@@ -122,7 +123,7 @@ struct ContentView: View {
                             Spacer()
 
                             if page == 4 {
-                                NavigationLink(destination: ActivitiesView(), label: {
+                                NavigationLink(destination: ActView(), label: {
                                     Image(systemName: "arrow.right.square")
                                         .resizable()
                                         .scaledToFit()
