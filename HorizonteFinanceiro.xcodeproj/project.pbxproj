@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB252D38292D3019009148C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB252D37292D3019009148C9 /* SettingsView.swift */; };
+		BB252D3C292D438C009148C9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB252D3B292D438C009148C9 /* ProfileView.swift */; };
 		BB5D84EC291189B0001A8CAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D84EB291189B0001A8CAE /* ContentView.swift */; };
 		BBA3DEE52926A62700288041 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA3DEE42926A62700288041 /* InitialView.swift */; };
 		BBAD4C96291EBB9D002982FC /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAD4C95291EBB9D002982FC /* ActivitiesView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB252D37292D3019009148C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = HorizonteFinanceiro/OptionScreens/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		BB252D3B292D438C009148C9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BB5D84EB291189B0001A8CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBA3DEE42926A62700288041 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialView.swift; path = HorizonteFinanceiro/HomeScreens/InitialView.swift; sourceTree = SOURCE_ROOT; };
 		BBAD4C95291EBB9D002982FC /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		BBD064B0290B1CA8008CC2B0 /* OptionScreens */ = {
 			isa = PBXGroup;
 			children = (
+				BB252D37292D3019009148C9 /* SettingsView.swift */,
+				BB252D3B292D438C009148C9 /* ProfileView.swift */,
 			);
 			path = OptionScreens;
 			sourceTree = "<group>";
@@ -173,7 +179,9 @@
 				BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */,
 				BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */,
 				BB5D84EC291189B0001A8CAE /* ContentView.swift in Sources */,
+				BB252D38292D3019009148C9 /* SettingsView.swift in Sources */,
 				BBA3DEE52926A62700288041 /* InitialView.swift in Sources */,
+				BB252D3C292D438C009148C9 /* ProfileView.swift in Sources */,
 				BBAD4C96291EBB9D002982FC /* ActivitiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

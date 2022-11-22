@@ -212,7 +212,7 @@ struct InitialView: View {
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
 
                 .toolbar{
-                    NavigationLink(destination: InitialView(),label: {
+                    NavigationLink(destination: SettingsView(), label: {
                         Image(systemName: "gearshape.fill")
                             .resizable()
                             .scaledToFit()
