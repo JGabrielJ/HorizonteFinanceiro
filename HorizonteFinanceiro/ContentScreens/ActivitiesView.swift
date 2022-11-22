@@ -47,7 +47,7 @@ struct ActivitiesView: View {
                                 RoundedRectangle(cornerRadius: 15)
                                     .stroke(.blue, lineWidth: 3)
                             )
-                        
+
                         Text("Começar Atividade")
                             .foregroundColor(.black)
                     }
@@ -59,17 +59,72 @@ struct ActivitiesView: View {
 
 struct ActView: View {
     @State var page = 0
-    @State var title = ""
     @State var progress: Double = 25
-    @State var conts = ["", "", "", "", ""]
+    @State var title = ["1. Primeira questão a ser colocada", "2. Selecione as opções corretas", "3. Leia o exemplo a seguir e assinale a alternativa correta"]
+    @State var conts = ["Opções 1", "Opções 2", "Opções 3"]
 
     var body: some View {
-        ProgressView(value: progress, total: 100)
-            .progressViewStyle(RoundRectStyle())
-        
-        Text("1. Primeira questão a ser colocada")
-            .padding()
-            .font(.title)
+        VStack {
+            ProgressView(value: progress, total: 100)
+                .padding()
+                .progressViewStyle(RoundRectStyle())
+
+            Text(title[page])
+                .font(.title)
+                .frame(width: 350, height: 150)
+                .multilineTextAlignment(.leading)
+                .navigationBarTitleDisplayMode(.inline)
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(.white)
+                    .frame(width: 350, height: 200)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(.blue, lineWidth: 3)
+                    )
+                
+                Text(conts[page])
+                    .foregroundColor(.black)
+            }
+            
+            Spacer()
+            
+            HStack {
+                Spacer()
+                
+                if page == 2 {
+                    NavigationLink(destination: EndingView(), label: {
+                        Image(systemName: "arrow.right.square")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(.blue)
+                            .frame(width: 48, height: 48)
+                            .padding()
+                    })
+                } else {
+                    Button {
+                        if page < conts.count - 1 {
+                            page += 1
+                            progress += 25
+                        }
+                    } label: {
+                        Image(systemName: "arrow.right.square")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(.blue)
+                            .frame(width: 48, height: 48)
+                            .padding()
+                    }
+                }
+            }
+        }.navigationBarBackButtonHidden(true)
+    }
+}
+
+struct EndingView: View {
+    var body: some View {
+        Text("Hello, World!")
     }
 }
 

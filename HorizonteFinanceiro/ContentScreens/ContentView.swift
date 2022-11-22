@@ -123,7 +123,7 @@ struct ContentView: View {
                             Spacer()
 
                             if page == 4 {
-                                NavigationLink(destination: ActView(), label: {
+                                NavigationLink(destination: ActivitiesView(), label: {
                                     Image(systemName: "arrow.right.square")
                                         .resizable()
                                         .scaledToFit()
