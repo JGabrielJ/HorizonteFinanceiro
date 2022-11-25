@@ -173,59 +173,78 @@ struct EndingView: View {
     @State var perc: Float = 0.0
 
     var body: some View {
-        VStack {
-            Text("Meus parabéns!\nAtividade concluída com sucesso!")
-                .padding()
-                .font(.title)
-                .multilineTextAlignment(.center)
-                .navigationBarTitleDisplayMode(.inline)
-
-            Spacer()
-                .frame(height: 30)
-
-            Text("Total de Questões: 5")
-                .bold()
-                .padding()
-                .font(.title2)
-                .foregroundColor(.blue)
-                .multilineTextAlignment(.center)
-                .navigationBarTitleDisplayMode(.inline)
-
-            Spacer()
-                .frame(height: 50)
-            
-            ZStack {
-                CircularProgress(percentage: self.$perc)
-                    .frame(width: 150, height: 150)
-
-                Text(String(format: "%.0f%%", min(self.perc, 1.0) * 100))
-                    .bold()
-                    .font(.largeTitle)
-            }
-
-            Spacer()
-                .frame(height: 50)
-            
-            HStack {
-                NavigationLink(destination: FeedbacksView(), label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 15)
-                            .fill(.white)
-                            .frame(width: 150, height: 50)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(.black, lineWidth: 3)
-                            )
-
-                        Text("Finalizar Atividade")
-                            .foregroundColor(.black)
-                    }
-                })
-
+        NavigationView {
+            VStack {
+                Text("Meus parabéns!\nAtividade concluída com sucesso!")
+                    .padding()
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                    .navigationBarTitleDisplayMode(.inline)
+                
                 Spacer()
-                    .frame(width: 35)
-
-                NavigationLink(destination: ActView(), label: {
+                    .frame(height: 30)
+                
+                Text("Total de Questões: 5")
+                    .bold()
+                    .padding()
+                    .font(.title2)
+                    .foregroundColor(.blue)
+                    .multilineTextAlignment(.center)
+                    .navigationBarTitleDisplayMode(.inline)
+                
+                Spacer()
+                    .frame(height: 50)
+                
+                ZStack {
+                    CircularProgress(percentage: self.$perc)
+                        .frame(width: 150, height: 150)
+                    
+                    Text(String(format: "%.0f%%", min(self.perc, 1.0) * 100))
+                        .bold()
+                        .font(.largeTitle)
+                }
+                
+                Spacer()
+                    .frame(height: 50)
+                
+                HStack {
+                    NavigationLink(destination: FeedbackView(), label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(.white)
+                                .frame(width: 150, height: 50)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(.black, lineWidth: 3)
+                                )
+                            
+                            Text("Finalizar Atividade")
+                                .foregroundColor(.black)
+                        }
+                    })
+                    
+                    Spacer()
+                        .frame(width: 35)
+                    
+                    NavigationLink(destination: ActView(), label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(.white)
+                                .frame(width: 150, height: 50)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(.black, lineWidth: 3)
+                                )
+                            
+                            Text("Tentar novamente")
+                                .foregroundColor(.black)
+                        }
+                    })
+                }
+                
+                Button {
+                    self.circularProgressAnimation()
+                } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.white)
@@ -234,27 +253,10 @@ struct EndingView: View {
                                 RoundedRectangle(cornerRadius: 15)
                                     .stroke(.black, lineWidth: 3)
                             )
-
-                        Text("Tentar novamente")
+                        
+                        Text("Verificar Resultado")
                             .foregroundColor(.black)
                     }
-                })
-            }
-
-            Button {
-                self.circularProgressAnimation()
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(.white)
-                        .frame(width: 150, height: 50)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(.black, lineWidth: 3)
-                        )
-
-                    Text("Verificar Resultado")
-                        .foregroundColor(.black)
                 }
             }
         }.navigationBarBackButtonHidden(true)

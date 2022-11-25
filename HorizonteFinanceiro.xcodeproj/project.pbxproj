@@ -16,7 +16,7 @@
 		BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */; };
 		BBD064A6290B1B2F008CC2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */; };
 		BBD064A9290B1B2F008CC2B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD064A8290B1B2F008CC2B0 /* Preview Assets.xcassets */; };
-		BBDE5F122931407C00E2CD75 /* FeedbacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE5F112931407C00E2CD75 /* FeedbacksView.swift */; };
+		BBDE5F122931407C00E2CD75 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE5F112931407C00E2CD75 /* FeedbackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		BBD064A3290B1B2F008CC2B0 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		BBD064A5290B1B2F008CC2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBD064A8290B1B2F008CC2B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BBDE5F112931407C00E2CD75 /* FeedbacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbacksView.swift; sourceTree = "<group>"; };
+		BBDE5F112931407C00E2CD75 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			children = (
 				BB5D84EB291189B0001A8CAE /* ContentView.swift */,
 				BBAD4C95291EBB9D002982FC /* ActivitiesView.swift */,
-				BBDE5F112931407C00E2CD75 /* FeedbacksView.swift */,
+				BBDE5F112931407C00E2CD75 /* FeedbackView.swift */,
 			);
 			path = ContentScreens;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD064A4290B1B2F008CC2B0 /* GeneralView.swift in Sources */,
-				BBDE5F122931407C00E2CD75 /* FeedbacksView.swift in Sources */,
+				BBDE5F122931407C00E2CD75 /* FeedbackView.swift in Sources */,
 				BBD064A2290B1B2F008CC2B0 /* HorizonteFinanceiroApp.swift in Sources */,
 				BB5D84EC291189B0001A8CAE /* ContentView.swift in Sources */,
 				BB252D38292D3019009148C9 /* SettingsView.swift in Sources */,

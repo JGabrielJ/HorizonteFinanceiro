@@ -8,14 +8,14 @@
 import SwiftUI
 
 
-struct FeedbacksView: View {
+struct FeedbackView: View {
     var body: some View {
-        Text("Olá, Mundo!")
+        Text("Hello, World!")
     }
 }
 
-struct FeedbacksView_Previews: PreviewProvider {
+struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbacksView()
+        FeedbackView()
     }
 }
