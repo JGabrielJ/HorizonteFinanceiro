@@ -84,7 +84,8 @@ struct ActivitiesView: View {
 
 struct ActView: View {
     @State var page = 0
-    @State var progress: Double = 29
+    @State var progress: Double = 20
+
     @State var title = ["1. Primeira questão a ser colocada", "2. Primeira questão a ser colocada", "3. Selecione as opções corretas", "4. Selecione as opções corretas", "5. Leia o exemplo a seguir e assinale a alternativa correta"]
     @State var tasks = [Task(name: "Primeira Opção", isCompleted: false), Task(name: "Segunda Opção", isCompleted: false), Task(name: "Terceira Opção", isCompleted: false)]
 
@@ -103,24 +104,13 @@ struct ActView: View {
             ZStack {
                 VStack {
                     List($tasks) { $task in
-                        if task.isCompleted {
-                            HStack {
-                                Image(systemName: task.isCompleted ? "checkmark.square": "square")
-                                    .onTapGesture {
-                                        task.isCompleted.toggle()
-                                    }
-                                
-                                Text(task.name)
-                            }.foregroundColor(Color.green)
-                        } else {
-                            HStack {
-                                Image(systemName: task.isCompleted ? "checkmark.square": "square")
-                                    .onTapGesture {
-                                        task.isCompleted.toggle()
-                                    }
-                                
-                                Text(task.name)
-                            }
+                        HStack {
+                            Image(systemName: task.isCompleted ? "checkmark.square": "square")
+                                .onTapGesture {
+                                    task.isCompleted.toggle()
+                                }
+                            
+                            Text(task.name)
                         }
                     }
                     .background(.white)
@@ -134,12 +124,10 @@ struct ActView: View {
                 }
             }
 
-            Spacer()
-
             HStack {
                 Spacer()
-                
-                if page == title.count - 1 {
+
+                if progress >= 100 {
                     NavigationLink(destination: EndingView(), label: {
                         Image(systemName: "arrow.right.square")
                             .resizable()
@@ -152,8 +140,8 @@ struct ActView: View {
                     Button {
                         if page < title.count - 1 {
                             page += 1
-                            //ForEach(1...14)
                         }
+                        self.progressBarAnimation()
                     } label: {
                         Image(systemName: "arrow.right.square")
                             .resizable()
@@ -165,6 +153,19 @@ struct ActView: View {
                 }
             }
         }.navigationBarBackButtonHidden(true)
+    }
+
+    func progressBarAnimation() {
+        var initialProgress = self.progress
+
+        _ = Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true) { timer in withAnimation() {
+                self.progress += 1
+                if self.progress >= initialProgress + 20 {
+                    timer.invalidate()
+                    initialProgress += 20
+                }
+            }
+        }
     }
 }
 
@@ -189,7 +190,7 @@ struct EndingView: View {
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
                 .navigationBarTitleDisplayMode(.inline)
-            
+
             Spacer()
                 .frame(height: 50)
             
@@ -206,7 +207,7 @@ struct EndingView: View {
                 .frame(height: 50)
             
             HStack {
-                NavigationLink(destination: Text("Atividade Finalizada!"), label: {
+                NavigationLink(destination: FeedbacksView(), label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.white)
@@ -241,11 +242,7 @@ struct EndingView: View {
             }
 
             Button {
-                if Int(perc) == 1 {
-                    perc = 0
-                } else {
-                    perc += 0.1
-                }
+                self.circularProgressAnimation()
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
@@ -256,16 +253,26 @@ struct EndingView: View {
                                 .stroke(.black, lineWidth: 3)
                         )
 
-                    Text("Incrementar Valor")
+                    Text("Verificar Resultado")
                         .foregroundColor(.black)
                 }
             }
         }.navigationBarBackButtonHidden(true)
     }
+
+    func circularProgressAnimation() {
+        _ = Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true) { timer in withAnimation() {
+                self.perc += 0.01
+                if self.perc >= 1.0 {
+                    timer.invalidate()
+                }
+            }
+        }
+    }
 }
 
 struct ActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivitiesView()
+        EndingView()
     }
 }
