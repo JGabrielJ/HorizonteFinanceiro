@@ -84,8 +84,8 @@ struct ActivitiesView: View {
 
 struct ActView: View {
     @State var page = 0
-    @State var progress: Double = 25
-    @State var title = ["1. Primeira questão a ser colocada", "2. Selecione as opções corretas", "3. Leia o exemplo a seguir e assinale a alternativa correta"]
+    @State var progress: Double = 29
+    @State var title = ["1. Primeira questão a ser colocada", "2. Primeira questão a ser colocada", "3. Selecione as opções corretas", "4. Selecione as opções corretas", "5. Leia o exemplo a seguir e assinale a alternativa correta"]
     @State var tasks = [Task(name: "Primeira Opção", isCompleted: false), Task(name: "Segunda Opção", isCompleted: false), Task(name: "Terceira Opção", isCompleted: false)]
 
     var body: some View {
@@ -139,7 +139,7 @@ struct ActView: View {
             HStack {
                 Spacer()
                 
-                if page == 2 {
+                if page == title.count - 1 {
                     NavigationLink(destination: EndingView(), label: {
                         Image(systemName: "arrow.right.square")
                             .resizable()
@@ -150,9 +150,9 @@ struct ActView: View {
                     })
                 } else {
                     Button {
-                        if page < tasks.count - 1 {
+                        if page < title.count - 1 {
                             page += 1
-                            progress += 25
+                            //ForEach(1...14)
                         }
                     } label: {
                         Image(systemName: "arrow.right.square")
@@ -206,9 +206,7 @@ struct EndingView: View {
                 .frame(height: 50)
             
             HStack {
-                Button {
-                    
-                } label: {
+                NavigationLink(destination: Text("Atividade Finalizada!"), label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.white)
@@ -221,14 +219,12 @@ struct EndingView: View {
                         Text("Finalizar Atividade")
                             .foregroundColor(.black)
                     }
-                }
-                
+                })
+
                 Spacer()
                     .frame(width: 35)
 
-                Button {
-                    
-                } label: {
+                NavigationLink(destination: ActView(), label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.white)
@@ -241,7 +237,7 @@ struct EndingView: View {
                         Text("Tentar novamente")
                             .foregroundColor(.black)
                     }
-                }
+                })
             }
 
             Button {
@@ -270,6 +266,6 @@ struct EndingView: View {
 
 struct ActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
-        EndingView()
+        ActivitiesView()
     }
 }
