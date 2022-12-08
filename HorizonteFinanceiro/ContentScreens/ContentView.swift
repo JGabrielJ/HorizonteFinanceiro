@@ -49,8 +49,8 @@ struct TipElement: View {
 struct ContentView: View {
     @State var page = 0
     @State var notice = ""
-    @State var title = ""
-    @State var conts = ["", "", "", "", ""]
+    @State var title = "Título da Seção"
+    @State var conts = ["Conteúdo 1", "Conteúdo 2", "Conteúdo 3", "Conteúdo 4", "Conteúdo 5"]
 
     var body: some View {
         NavigationView {

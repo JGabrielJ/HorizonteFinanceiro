@@ -140,7 +140,7 @@ struct InitialView2: View {
             )
             Section {
                 NavigationLink(destination: ContentView(title: "Fundo Imobiliário e Poupança", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("")
+                    Image("save-money")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
@@ -155,7 +155,7 @@ struct InitialView2: View {
             Section("Bancos e Investimentos") {
                 HStack {
                     NavigationLink(destination: ContentView(title: "Tipos de Bancos e suas Relações", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                        Image("")
+                        Image("bank")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
@@ -170,7 +170,7 @@ struct InitialView2: View {
             }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: ContentView(title: "Menores de idade podem investir?", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("")
+                    Image("problem")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
@@ -182,9 +182,9 @@ struct InitialView2: View {
                     .stroke(.blue, lineWidth: 3)
                     .frame(width: 350, height: 65)
             )
-            Section{
+            Section {
                 NavigationLink(destination: ContentView(title: "Vantagens e Desvantagens de Investimento", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("")
+                    Image("earning")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
