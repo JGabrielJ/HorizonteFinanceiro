@@ -15,7 +15,7 @@ struct InitialView1: View {
             Section("Introdução ao Mundo Financeiro") {
                 HStack {
                     NavigationLink(destination: ContentView(title: "Educação Financeira e Seus Aspectos", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                        Image("Hands - Coin")
+                        Image("dollar")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
@@ -31,7 +31,7 @@ struct InitialView1: View {
             }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: ContentView(title: "Planejamento Financeiro e Sua Importância", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("Planejamento")
+                    Image("planning")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
@@ -45,7 +45,7 @@ struct InitialView1: View {
             )
             Section {
                 NavigationLink(destination: ContentView(title: "Renda Variável x Renda Fixa", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("Variável x Fixa")
+                    Image("pie-chart")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
@@ -60,7 +60,7 @@ struct InitialView1: View {
             Section("Investimentos e Conta Bancária") {
                 HStack {
                     NavigationLink(destination: ContentView(title: "Bancos: Aliados ou Inimigos?", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                        Image("Cash")
+                        Image("money")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
@@ -74,13 +74,13 @@ struct InitialView1: View {
                 )
             }.headerProminence(.increased)
             Section {
-                NavigationLink(destination: ContentView(title: "Uso e Precaução", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("Creditcard")
+                NavigationLink(destination: ContentView(title: "Uso e Precauções com Cartão de Crédito", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
+                    Image("credit-card")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
                     Spacer(minLength: 20)
-                    Text("Uso e Precaução")
+                    Text("Uso e Precauções com Cartão de Crédito")
                 })
             }.overlay(
                 RoundedRectangle(cornerRadius: 15)
@@ -88,13 +88,13 @@ struct InitialView1: View {
                     .frame(width: 350, height: 65)
             )
             Section {
-                NavigationLink(destination: ContentView(title: "Juros Composto x Juros Variável", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("Juros")
+                NavigationLink(destination: ContentView(title: "Juros Simples x Juros Compostos", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
+                    Image("budget")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
                     Spacer(minLength: 20)
-                    Text("Juros Composto x Juros Variável")
+                    Text("Juros Simples x Juros Compostos")
                     })
                 }.overlay(
                     RoundedRectangle(cornerRadius: 15)
@@ -111,7 +111,7 @@ struct InitialView2: View {
             Section("Renda Fixa") {
                 HStack {
                     NavigationLink(destination: ContentView(title: "Introdução a Renda Fixa", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                        Image("Chart")
+                        Image("business-report")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 45, height: 45)
@@ -126,7 +126,7 @@ struct InitialView2: View {
             }.headerProminence(.increased)
             Section {
                 NavigationLink(destination: ContentView(title: "CDB x LCI", conts: ["C1", "C2", "C3", "C4", "C5"]), label: {
-                    Image("Give")
+                    Image("stats")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
